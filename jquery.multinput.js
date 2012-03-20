@@ -41,11 +41,12 @@
 
         if (options.empty && input.is(options.empty)) {
           wireframe = container.clone();
+          container.remove();
         }
       });
 
       // add add button
-      cont.find('.multInput-row:last-child').after(addbutton);
+      cont.append(addbutton);
 
       // create input wireframe if not given (options.empty)
       if (!wireframe) {
@@ -88,6 +89,9 @@
         $(this).parents('.multInput-row').before(newRow);
         cont.trigger('reorder');
       });
+      if (!inputs.not(options.empty).length) {
+        cont.find('.multInput-add').click();
+      }
 
       cont.bind('reorder', function() {
         cont.find('.multInput-row.last').removeClass('last');
