@@ -10,6 +10,7 @@
       , items: '.item'
       , empty: '.empty'
       , uniqueId: true
+      , itemName: 'item'
     }
   }
 
@@ -21,10 +22,10 @@
         , options = $.extend({}, $.multInput.defaults, opts)
         , inputs = cont.find(options.items)
         , controls = '<div class="multInput-controls">'
-                    + (options.delete?'<a class="multInput-control delete" title="delete item"></a>':'')
-                    + (options.order?'<a class="multInput-control up" title="move item up"></a><a class="multInput-control down" title="move item down"></a>':'')
+                    + (options.delete?'<a class="multInput-control delete" title="delete '+options.itemName+'"></a>':'')
+                    + (options.order?'<a class="multInput-control up" title="move '+options.itemName+' up"></a><a class="multInput-control down" title="move '+options.itemName+' down"></a>':'')
                     + '</div>'
-        , addbutton = '<div class="multInput-row add"><a class="multInput-add">add new item</a></div>'
+        , addbutton = '<div class="multInput-row add"><a class="multInput-add">add new '+options.itemName+'</a></div>'
         , inputContainer = '<div class="multInput-row input clearfix">'+controls+'</div>'
         , wireframe;
 
