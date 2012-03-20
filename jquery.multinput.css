@@ -1,5 +1,5 @@
 .multInput-row, .multInput-input { float: left; clear: left;}
-.multInput-controls { float: left; padding-top: 4px;}
+.multInput-controls { float: left; padding: 4px 0 0 10px;}
 .multInput-control {display: inline-block; width: 16px; height: 16px; background-image: url(images/controls.png); background-repeat: no-repeat; cursor: pointer;}
 .multInput-control.delete {background-position: 0 0;}
 .multInput-control.delete:hover {background-position: -16px 0;}
@@ -9,6 +9,8 @@
 .multInput-control.down:hover {background-position: -16px -32px;}
 .multInput-row.input:first-child .multInput-control.up
 , .multInput-row.input.last .multInput-control.down {display: none;}
+
+.multInput-row.add { margin-top: 10px;}
 .multInput-add {padding-left: 20px; line-height: 20px; background-image: url(images/add.png); background-position: 0 0; background-repeat: no-repeat; cursor: pointer;}
 .multInput-add:hover {background-position: 0 -20px;}
 

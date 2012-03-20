@@ -5,6 +5,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="../jquery.multinput.js"></script>
     <link rel="stylesheet" href="../jquery.multinput.css">
+    <style>
+      div.demo {border-top: 2px dotted #ccc; padding-top: 20px; margin-bottom: 20px;}
+    </style>
   </head>
   <body>
     <h1>jQuery multInput demo page</h1>
@@ -18,6 +21,47 @@
       <script>
         $(function(){
           $('#demo1').multInput();
+        });
+      </script>
+    </div>
+
+    <div class="demo">
+      <p>Default settings with a multiple input config</p>
+      <fieldset id="demo2">
+        <div class="item">
+          <label>input label</label><input type="text" placeholder="placeholder">
+          <label>select label</label><select><option>option 1</option><option>option 3</option></select>
+          <label>checkbox name</label><input type="checkbox" checked="checked">
+        </div>
+      </fieldset>
+      <style>
+        #demo2 .item {border: 2px solid #ccc; padding: 10px; margin-bottom: 10px;}
+        #demo2 .item label { float: left; clear: left; width: 200px; height: 20px; display: block; margin-top: 10px;}
+        #demo2 .item input, #demo2 .item select { float: left; height: 20px; margin-top: 10px;}
+      </style>
+      <script>
+        $(function(){
+          $('#demo2').multInput();
+        });
+      </script>
+    </div>
+
+    <div class="demo">
+      <p>Default settings with pre-existing items</p>
+      <fieldset id="demo3">
+        <div class="item">
+          <input type="text" placeholder="placeholder" value="first item">
+        </div>
+        <div class="item">
+          <input type="text" placeholder="placeholder" value="second thing">
+        </div>
+        <div class="item">
+          <input type="text" placeholder="placeholder" value="third foo">
+        </div>
+      </fieldset>
+      <script>
+        $(function(){
+          $('#demo3').multInput();
         });
       </script>
     </div>
