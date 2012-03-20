@@ -1,0 +1,27 @@
+.multInput-row, .multInput-input { float: left; clear: left;}
+.multInput-controls { float: left; padding-top: 4px;}
+.multInput-control {display: inline-block; width: 16px; height: 16px; background-image: url(images/controls.png); background-repeat: no-repeat; cursor: pointer;}
+.multInput-control.delete {background-position: 0 0;}
+.multInput-control.delete:hover {background-position: -16px 0;}
+.multInput-control.up {background-position: 0 -16px;}
+.multInput-control.up:hover {background-position: -16px -16px;}
+.multInput-control.down {background-position: 0 -32px;}
+.multInput-control.down:hover {background-position: -16px -32px;}
+.multInput-row.input:first-child .multInput-control.up
+, .multInput-row.input.last .multInput-control.down {display: none;}
+.multInput-add {padding-left: 20px; line-height: 20px; background-image: url(images/add.png); background-position: 0 0; background-repeat: no-repeat; cursor: pointer;}
+.multInput-add:hover {background-position: 0 -20px;}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

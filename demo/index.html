@@ -4,13 +4,16 @@
     <title>jQuery multInput demo</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="../jquery.multinput.js"></script>
+    <link rel="stylesheet" href="../jquery.multinput.css">
   </head>
   <body>
     <h1>jQuery multInput demo page</h1>
     <div class="demo">
       <p>Default settings with a single text input</p>
-      <fieldset>
-        <input type="text" placeholder="placeholder" id="demo1">
+      <fieldset id="demo1">
+        <div class="item">
+          <input type="text" placeholder="placeholder">
+        </div>
       </fieldset>
       <script>
         $(function(){
