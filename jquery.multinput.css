@@ -11,7 +11,7 @@
 , .multInput-row.input.last .multInput-control.down {display: none;}
 
 .multInput-row.add { margin-top: 10px;}
-.multInput-add {padding-left: 20px; line-height: 20px; background-image: url(images/add.png); background-position: 0 0; background-repeat: no-repeat; cursor: pointer;}
+.multInput-add {padding-left: 20px; line-height: 20px; background-image: url(images/add.png); background-position: 0 0; background-repeat: no-repeat; cursor: pointer; display: inline-block;}
 .multInput-add:hover {background-position: 0 -20px;}
 
 .clearfix:after {
