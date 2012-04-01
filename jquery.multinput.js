@@ -89,6 +89,7 @@
         }
         $(this).parents('.multInput-row').before(newRow);
         cont.trigger('reorder');
+        if (options.onAdd) options.onAdd.apply(newRow);
       });
       if (!inputs.not(options.empty).length) {
         cont.find('.multInput-add').click();
