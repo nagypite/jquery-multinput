@@ -8,6 +8,7 @@
       , add: true
       , images: 'images/'
       , items: '.item'
+      , orderInput: null
       , empty: '.empty'
       , uniqueId: true
       , itemName: 'item'
@@ -98,6 +99,11 @@
       cont.bind('reorder', function() {
         cont.find('.multInput-row.last').removeClass('last');
         cont.find('.multInput-row.input').last().addClass('last');
+        if (options.orderInput) {
+          cont.find('.multInput-row '+options.orderInput).each( function(i) {
+            $(this).val(i+1);
+          });
+        }
       }).trigger('reorder');
     })
   }
