@@ -2,7 +2,7 @@
 (function($){
   $.multInput = {
       defaults: {
-        delete: true
+        'delete': true
       , deleteConfirm: null
       , order: true
       , add: true
@@ -23,7 +23,7 @@
         , options = $.extend({}, $.multInput.defaults, opts)
         , inputs = cont.find(options.items)
         , controls = '<div class="multInput-controls">'
-                    + (options.delete?'<a class="multInput-control delete" title="delete '+options.itemName+'"></a>':'')
+                    + (options['delete']?'<a class="multInput-control delete" title="delete '+options.itemName+'"></a>':'')
                     + (options.order?'<a class="multInput-control up" title="move '+options.itemName+' up"></a><a class="multInput-control down" title="move '+options.itemName+' down"></a>':'')
                     + '</div>'
         , addbutton = '<div class="multInput-row add"><a class="multInput-add">add new '+options.itemName+'</a></div>'
@@ -59,7 +59,7 @@
       }
 
       // add listeners
-      if (options.delete) {
+      if (options['delete']) {
         cont.delegate('.multInput-control.delete', 'click', function() {
           if ((options.deleteConfirm && confirm(options.deleteConfirm)) || !options.deleteConfirm) {
             $(this).parents('.multInput-row').remove();
