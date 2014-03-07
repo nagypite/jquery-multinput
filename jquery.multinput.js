@@ -62,7 +62,9 @@
       if (options['delete']) {
         cont.delegate('.multInput-control.delete', 'click', function() {
           if ((options.deleteConfirm && confirm(options.deleteConfirm)) || !options.deleteConfirm) {
-            $(this).parents('.multInput-row').remove();
+            var row = $(this).parents('.multInput-row');
+            if (options.onDelete) options.onDelete.apply(row);
+            row.remove();
             cont.trigger('reorder');
           }
         });
